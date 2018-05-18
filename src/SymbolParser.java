@@ -1,74 +1,110 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class SymbolParser {
+enum Connective {
+    Negation, Conjunction, Disjunction, Implication, Biconditional
+}
 
-    //definite clause: disjunction with exactly 1 is positive
-    //horn clause: disjunction at most 1 is positive
+class SymbolParser {
     //clause: symbol, connective
     private String clause;
     private boolean isUnary = false;
     private boolean isBinary = false;
+
     private List<PropositionalSymbol> symbols = new ArrayList<>();
 
     SymbolParser(String clause) {
-
         this.clause = clause;
-
         //check if the clause is unary or binary
-        int indexCheckA = this.clause.indexOf("=>");
-        int indexCheckB = this.clause.indexOf("<=>");
-        if (indexCheckA >= 0 || indexCheckB >= 0) {
+        if (this.clause.contains("=>")) {
             this.isBinary = true;
         } else {
             this.isUnary = true;
         }
-
         this.rawClauseParser();
     }
 
     //extract the original clause passed through param
     private void rawClauseParser() {
-
+        //sentences
         if (isBinary) {
+            String[] temp = clause.split("=>");
 
-            String[] temp = clause.split("=>|<=>");
+            //premise
             String body = temp[0];
-
-            //and-or
+            //and-or for premise
             String[] tokens = body.split("&|\\|");
-
             //Initially false of all the symbol (body)
-            for (String token : tokens) {
-                symbols.add(new PropositionalSymbol(token));
+            for (int i = 0; i < tokens.length; i++) {
+                PropositionalSymbol newSymbol = new PropositionalSymbol(tokens[i]);
+                //assign available connective on the right of the symbol
+                if (i < connectiveSplitter(body).size()) {
+                    newSymbol.setRightConnective(connectiveSplitter(body).get(i));
+                }
+                //last element of the premise has connective => on the right
+                if (i == tokens.length - 1) {
+                    newSymbol.setRightConnective(Connective.Implication);
+                }
+                symbols.add(newSymbol);
             }
 
+            //conclusion
             String head = temp[1];
+            //and-or for conclusion
+            tokens = head.split("&|\\|");
             //Initially false of all the symbol (head)
-            symbols.add(new PropositionalSymbol(head));
+            for (int i = 0; i < tokens.length; i++) {
+                PropositionalSymbol newSymbol = new PropositionalSymbol(tokens[i]);
+                newSymbol.partofConclusion(true);
+                //assign available connective on the right of the symbol
+                if (i < connectiveSplitter(head).size()) {
+                    newSymbol.setRightConnective(connectiveSplitter(head).get(i));
+                }
+                symbols.add(newSymbol);
+            }
         }
 
+        //fact
         if (isUnary) {
             String head = clause;
             //initially symbol known to be true in the KB
-            symbols.add(new PropositionalSymbol(head, true));
-        }
-
-        //if a symbol has negation notation -> it's negative
-        for (PropositionalSymbol symbol : symbols) {
-            if (symbol.Description().contains("~")) {
-                symbol.setConnective(Connective.Negation);
-                symbol.setPositive(false);
-            } else {
-                symbol.setPositive(true);
-            }
+            PropositionalSymbol newSymbol = new PropositionalSymbol(head, true);
+            //this symbol is a fact
+            newSymbol.setFact(true);
+            symbols.add(newSymbol);
         }
     }
 
+    //split the premise and conclusion to multiple symbols with their connectives
+    private List<Connective> connectiveSplitter(String input) {
+        List<Connective> connectives = new ArrayList<>();
+        //parsing available connectives in the premise and conclusion
+        String rawConnectives = input.replaceAll("[a-zA-Z0-9]", "");
+        String[] splitConnectives = rawConnectives.split("");
+        for (String rawConnective : splitConnectives) {
+            Connective connective;
+            switch(rawConnective) {
+                case "&":
+                    connective = Connective.Conjunction;
+                    break;
+                case "|":
+                    connective = Connective.Disjunction;
+                    break;
+                default:
+                    connective = null;
+                    break;
+            }
+            connectives.add(connective);
+        }
+        return connectives;
+    }
+
+    //raw clause
     String Clause() {
         return clause;
     }
 
+    //extracted symbols from the raw clause
     List<PropositionalSymbol> Symbols() {
         return symbols;
     }

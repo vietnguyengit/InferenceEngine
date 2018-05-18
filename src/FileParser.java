@@ -27,7 +27,6 @@ class FileParser {
             String line;
             while((line = buffered_reader.readLine()) != null) {
                 String spaceEscaped = line.replace(" ", "");
-
                 //file was read, each line is one of the elements of the file_read_lines list
                 //line 0 is keyword "TELL"
                 //line 1 is the knowledge base

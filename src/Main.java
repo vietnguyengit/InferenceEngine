@@ -2,7 +2,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+enum Method {
+    TT, FC, BC
+}
+
 public class Main {
+
+    private static Method method;
+
     public static void main(String[] args) {
 
         //variable to hold any available error messages
@@ -21,10 +28,13 @@ public class Main {
             //validate algorithm keyword
             switch (args[0]) {
                 case "TT":
+                    method = Method.TT;
                     break;
                 case "FC":
+                    method = Method.FC;
                     break;
                 case "BC":
+                    method = Method.BC;
                     break;
                 default:
                     errorMessages.add("Incorrect algorithm keyword. Available algorithms: TT (TruthTable), " +
@@ -46,19 +56,43 @@ public class Main {
                 System.out.println(errorMessage);
             }
         } else {
-
             FileParser parseFile = new FileParser(args[1]);
 
             //used as param for creating KB
+            List<String> preparedRawClauses = new ArrayList<>();
             if (!parseFile.rawClauses().isEmpty()) {
                 for (String rawClause : parseFile.rawClauses()) {
-                    SymbolParser symbolParser = new SymbolParser(rawClause);
-                    for (PropositionalSymbol symbol: symbolParser.Symbols()) {
-                        System.out.println(symbolParser.Clause() + " : " + symbol.Description() + " " + symbol.isTrue() + " " + symbol.isPositive());
+                    //reconstruct biconditional clause into 2 implication clause
+                    if (rawClause.contains("<=>")) {
+                        String[] temp = rawClause.split("<=>");
+                        String premise = temp[0];
+                        String conclusion = temp[1];
+
+                        String forwardClause = premise+"=>"+conclusion;
+                        String backwardClause = conclusion+"=>"+premise;
+
+                        preparedRawClauses.addAll(Arrays.asList(forwardClause, backwardClause));
+                    } else {
+                        preparedRawClauses.add(rawClause);
                     }
                 }
             }
 
+            List<Clause> clauses = new ArrayList<>();
+            for (String preparedRawClause : preparedRawClauses) {
+                SymbolParser symbolParser = new SymbolParser(preparedRawClause);
+                Clause newClause = new Clause(symbolParser.Symbols());
+                clauses.add(newClause);
+            }
+
+            KnowledgeBase kb = new KnowledgeBase(clauses);
+
+            switch (method) {
+                case FC:
+                    ForwardChaining fc = new ForwardChaining(kb, parseFile.Query());
+                    fc.Result();
+                    break;
+            }
         }
     }
 }
