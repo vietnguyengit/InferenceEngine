@@ -92,6 +92,10 @@ public class Main {
                     ForwardChaining fc = new ForwardChaining(kb, parseFile.Query());
                     fc.Result();
                     break;
+                case BC:
+                    BackwardChaining bc = new BackwardChaining(kb, parseFile.Query());
+                    bc.Result();
+                    break;
             }
         }
     }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -11,22 +12,32 @@ class Clause {
     }
 
     //the premise
-    Hashtable Premise() {
-        Hashtable<PropositionalSymbol, String> premise = new Hashtable<>();
+    HashMap Premise() {
+        HashMap<String, PropositionalSymbol> premise = new HashMap<>();
         for (PropositionalSymbol symbol : symbols) {
             if (!symbol.partofConclusion() && !symbol.isFact()) {
-                premise.put(symbol, symbol.Description());
+                premise.put(symbol.Description(), symbol);
+            }
+        }
+        return premise;
+    }
+
+    List<PropositionalSymbol> PremiseForBC() {
+        List<PropositionalSymbol> premise = new ArrayList<>();
+        for (PropositionalSymbol symbol : symbols) {
+            if (!symbol.partofConclusion() && !symbol.isFact()) {
+                premise.add(symbol);
             }
         }
         return premise;
     }
 
     //the conclusion
-    List<PropositionalSymbol> Conclusion() {
-        List<PropositionalSymbol> conclusion = new ArrayList<>();
+    HashMap Conclusion() {
+        HashMap<String, PropositionalSymbol> conclusion = new HashMap<>();
         for (PropositionalSymbol symbol : symbols) {
             if (symbol.partofConclusion()) {
-                conclusion.add(symbol);
+                conclusion.put(symbol.Description(), symbol);
             }
         }
         return conclusion;
