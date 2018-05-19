@@ -9,7 +9,7 @@ import java.util.*;
 class ForwardChaining {
 
     private String printResult;
-    private List<String> entailed = new ArrayList<>();
+    private Set<String> entailed = new LinkedHashSet<>();
 
     ForwardChaining(KnowledgeBase kb, String query) {
         boolean doesEntail = false;

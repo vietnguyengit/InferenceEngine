@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec10699-8141-414f-8b83-20a4c4c46706" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BackwardChaining.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Clause.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AI_inference-engine/Clause.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/EntailmentMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/ForwardChaining.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AI_inference-engine/ForwardChaining.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AI_inference-engine/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AI_inference-engine/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clause.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clause.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EntailmentMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/BackwardChaining.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AI_inference-engine/BackwardChaining.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BackwardChaining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackwardChaining.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ForwardChaining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ForwardChaining.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForwardChaining.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ForwardChaining.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ForwardChaining.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+            <state relative-caret-position="-517">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -102,6 +93,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BackwardChaining.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BackwardChaining.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="KnowledgeBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/KnowledgeBase.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,15 +112,6 @@
                 <element signature="e#901#902#0" expanded="true" />
                 <element signature="e#931#932#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackwardChaining.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BackwardChaining.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -167,8 +158,8 @@
         <option value="$PROJECT_DIR$/src/test3.txt" />
         <option value="$PROJECT_DIR$/src/KnowledgeBase.java" />
         <option value="$PROJECT_DIR$/src/Clause.java" />
-        <option value="$PROJECT_DIR$/src/ForwardChaining.java" />
         <option value="$PROJECT_DIR$/src/BackwardChaining.java" />
+        <option value="$PROJECT_DIR$/src/ForwardChaining.java" />
       </list>
     </option>
   </component>
@@ -345,12 +336,12 @@
       <workItem from="1526715666218" duration="5463000" />
       <workItem from="1526722013528" duration="351000" />
       <workItem from="1526722446394" duration="7548000" />
-      <workItem from="1526730701099" duration="6528000" />
+      <workItem from="1526730701099" duration="7949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112505000" />
+    <option name="totallyTimeSpent" value="113926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="831" extended-state="0" />
@@ -734,18 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/KnowledgeBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -763,23 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SymbolParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-922">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Clause.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-174">
@@ -794,6 +756,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -801,17 +770,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ForwardChaining.java">
+    <entry file="file://$PROJECT_DIR$/src/SymbolParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        <state relative-caret-position="-922">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KnowledgeBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BackwardChaining.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+        <state relative-caret-position="308">
+          <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ForwardChaining.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-517">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

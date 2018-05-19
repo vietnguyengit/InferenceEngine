@@ -9,7 +9,8 @@ import java.util.*;
 class BackwardChaining {
 
     private String printResult;
-    private List<String> entailed = new ArrayList<>();
+    private Set<String> entailed = new LinkedHashSet<String>() {
+    };
 
     BackwardChaining(KnowledgeBase kb, String query) {
         boolean doesEntail = false;
@@ -69,8 +70,9 @@ class BackwardChaining {
 
     void Result() {
         System.out.print(printResult + ": ");
-        Collections.reverse(entailed);
-        String entailedList = Arrays.toString(entailed.toArray()).replaceAll("\\[|\\]", "");
+        List<String> result = new ArrayList<>(entailed);
+        Collections.reverse(result);
+        String entailedList = Arrays.toString(result.toArray()).replaceAll("\\[|\\]", "");
         System.out.println(entailedList);
     }
 }
