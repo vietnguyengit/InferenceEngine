@@ -8,15 +8,13 @@ import java.util.*;
 //This class was written using the pseudo code from Figure 7.15 (page 258) AI - A Modern Approach 3rd edition
 class ForwardChaining {
 
-    private String printResult;
     private Set<String> entailed = new LinkedHashSet<>();
+    private boolean doesEntail;
 
     ForwardChaining(KnowledgeBase kb, String query) {
-        boolean doesEntail = false;
         List<Clause> clauses = kb.Clauses();
 
         //initialise count, agenda & inferred
-
         //count: "a table, where count[c] is the number of symbols in c’s premise"
         HashMap<Clause, Integer> count = new HashMap<>();
         for (Clause clause : clauses) {
@@ -64,13 +62,16 @@ class ForwardChaining {
                 }
             }
         }
-
-        printResult = doesEntail ? "YES" : "NO";
     }
 
     void Result() {
-        System.out.print(printResult + ": ");
-        String entailedList = Arrays.toString(entailed.toArray()).replaceAll("\\[|\\]", "");
-        System.out.println(entailedList);
+        String printResult;
+        if (doesEntail) {
+            String entailedList = Arrays.toString(entailed.toArray()).replaceAll("\\[|\\]", "");
+            printResult = "YES: " + entailedList;
+        } else {
+            printResult = "NO";
+        }
+        System.out.println(printResult);
     }
 }

@@ -1,14 +1,27 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.List;
 
 class Clause {
 
-    private List<PropositionalSymbol> symbols;
+    private List<PropositionalSymbol> symbols = new ArrayList<>();
+    private boolean value;
+
+    private Connective rightConnective;
 
     Clause(List<PropositionalSymbol> symbols) {
         this.symbols = symbols;
+    }
+
+    Clause(PropositionalSymbol symbol) {
+        this.symbols.add(symbol);
+    }
+
+    Connective getConnective() {
+        return this.rightConnective;
+    }
+    void connect() {
+        this.rightConnective = Connective.Conjunction;
     }
 
     //the premise

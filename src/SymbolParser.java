@@ -68,7 +68,7 @@ class SymbolParser {
         if (isUnary) {
             String head = clause;
             //initially symbol known to be true in the KB
-            PropositionalSymbol newSymbol = new PropositionalSymbol(head, true);
+            PropositionalSymbol newSymbol = new PropositionalSymbol(head);
             //this symbol is a fact
             newSymbol.setFact(true);
             symbols.add(newSymbol);

@@ -8,12 +8,10 @@ import java.util.*;
 //This class was written using the pseudo code from Figure 7.15 (page 258) AI - A Modern Approach 3rd edition
 class BackwardChaining {
 
-    private String printResult;
-    private Set<String> entailed = new LinkedHashSet<String>() {
-    };
+    private boolean doesEntail;
+    private Set<String> entailed = new LinkedHashSet<>();
 
     BackwardChaining(KnowledgeBase kb, String query) {
-        boolean doesEntail = false;
         List<Clause> clauses = kb.Clauses();
 
         //initialise count, agenda & inferred
@@ -64,15 +62,18 @@ class BackwardChaining {
                 }
             }
         }
-
-        printResult = doesEntail ? "YES" : "NO";
     }
 
     void Result() {
-        System.out.print(printResult + ": ");
-        List<String> result = new ArrayList<>(entailed);
-        Collections.reverse(result);
-        String entailedList = Arrays.toString(result.toArray()).replaceAll("\\[|\\]", "");
-        System.out.println(entailedList);
+        String printResult;
+        if (doesEntail) {
+            List<String> result = new ArrayList<>(entailed);
+            Collections.reverse(result);
+            String entailedList = Arrays.toString(result.toArray()).replaceAll("\\[|\\]", "");
+            printResult = "YES: " + entailedList;
+        } else {
+            printResult = "NO";
+        }
+        System.out.println(printResult);
     }
 }

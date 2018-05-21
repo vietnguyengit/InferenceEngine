@@ -1,4 +1,0 @@
-TELL
-p1 => p2
-ASK
-p2

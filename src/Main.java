@@ -96,6 +96,10 @@ public class Main {
                     BackwardChaining bc = new BackwardChaining(kb, parseFile.Query());
                     bc.Result();
                     break;
+                case TT:
+                    TruthTable tt = new TruthTable(kb, parseFile.Query());
+                    tt.Result();
+                    break;
             }
         }
     }
