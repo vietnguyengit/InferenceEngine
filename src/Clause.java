@@ -12,7 +12,6 @@ class Clause {
     Clause(List<PropositionalSymbol> symbols) {
         this.symbols = symbols;
     }
-
     Clause(PropositionalSymbol symbol) {
         this.symbols.add(symbol);
     }
@@ -33,6 +32,14 @@ class Clause {
             }
         }
         return premise;
+    }
+
+    boolean getValue() {
+        return value;
+    }
+
+    void setValue(boolean value) {
+        this.value = value;
     }
 
     List<PropositionalSymbol> PremiseForBC() {

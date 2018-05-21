@@ -58,7 +58,8 @@ class TruthTable {
     }
 
     void Result() {
-        if (this.entail(kb, query)) {
+        //always return true when KB is false, so an additional condition is count > 0
+        if (this.entail(kb, query) && count > 0) {
             System.out.println("YES: " + count);
         } else {
             System.out.println("NO");

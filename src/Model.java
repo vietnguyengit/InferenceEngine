@@ -20,8 +20,11 @@ class Model {
     }
 
     // p1 & p2 => p3
-    boolean isClauseTrue(Clause clause) {
 
+    private boolean premiseValue;
+    private boolean conclusionValue;
+
+    boolean isClauseTrue(Clause clause) {
         //check if the param clause is unary clause or not
         boolean isUnary = false;
         if (clause.Symbols().size() == 1) {
@@ -29,80 +32,103 @@ class Model {
         }
 
         //case clause is unary
+        boolean result;
         if (isUnary) {
             PropositionalSymbol symbol = clause.Symbols().get(0);
 
             //case the symbol is not negated
             if (symbol.leftConnective() == null) {
-                return this.isSymbolTrue(symbol.Description());
+                result = this.isSymbolTrue(symbol.Description());
             } else {
-                return !this.isSymbolTrue(symbol.Description());
+                result = !this.isSymbolTrue(symbol.Description());
             }
 
+            clause.setValue(result);
+            return result;
+
         } else {
-            //list true/false value of symbols from the clause's premise
-            List<Boolean> premiseValues = new ArrayList<>();
-            List<Connective> premiseConnectives = new ArrayList<>();
-            //boolean value of the clause's premise
-            boolean premiseValue;
-
-            //list true/false value of symbols from the clause's conclusion
-            List<Boolean> conclusionValues = new ArrayList<>();
-            List<Connective> conclusionConnectives = new ArrayList<>();
-            //boolean value of the clause's conclusion
-            boolean conclusionValue;
-
             //case clause includes multiple symbols
+
+            List<PropositionalSymbol> premiseSymbolswithModel = new ArrayList<>();
+            List<PropositionalSymbol> conclusionSymbolswithModel = new ArrayList<>();
 
             for (int i = 0; i < clause.Symbols().size(); i++) {
 
                 PropositionalSymbol symbol = clause.Symbols().get(i);
                 //the clause's premise
                 if (!symbol.partofConclusion()) {
-                    //case the symbol is not negated
+                    //set value for each symbol of the premise of the clause in the model
                     if (symbol.leftConnective() == null) {
-                        premiseValues.add(this.isSymbolTrue(symbol.Description()));
+                        symbol.setValue(this.isSymbolTrue(symbol.Description()));
                     } else {
-                        premiseValues.add(!this.isSymbolTrue(symbol.Description()));
+                        symbol.setValue(!this.isSymbolTrue(symbol.Description()));
                     }
-                    //initialise list of connectives between symbols in the premise
+                    //set connective for each symbol of the premise of the clause in the model
                     if (symbol.rightConnective() != Connective.Implication) {
-                        premiseConnectives.add(symbol.rightConnective());
-                    }
-
-                } else { //the clause's conclusion
-                    //case the symbol is not negated
-                    if (symbol.leftConnective() == null) {
-                        conclusionValues.add(this.isSymbolTrue(symbol.Description()));
+                        symbol.setRightConnective(symbol.rightConnective());
                     } else {
-                        conclusionValues.add(!this.isSymbolTrue(symbol.Description()));
+                        symbol.setRightConnective(null);
                     }
-                    //initialise list of connectives between symbols in the conclusion
+                    //add the new symbol to the list
+                    premiseSymbolswithModel.add(symbol);
+
+                } else {
+                    if (symbol.leftConnective() == null) {
+                        symbol.setValue(this.isSymbolTrue(symbol.Description()));
+                    } else {
+                        symbol.setValue(!this.isSymbolTrue(symbol.Description()));
+                    }
                     if (symbol.rightConnective() != null) {
-                        conclusionConnectives.add(symbol.rightConnective());
+                        symbol.setRightConnective(symbol.rightConnective());
                     }
+                    conclusionSymbolswithModel.add(symbol);
                 }
             }
 
+            //TO-DO
             //assign value for premiseValue
-            premiseValue = premiseValues.get(0);
+            if (premiseSymbolswithModel.size() == 2) {
+                premiseValue = value(premiseSymbolswithModel.get(0), premiseSymbolswithModel.get(1));
+            }
+            if (premiseSymbolswithModel.size() == 1) {
+                premiseValue = value(premiseSymbolswithModel.get(0), null);
+            }
 
             //assign value for conclusionValue
-            conclusionValue = conclusionValues.get(0);
+            if (conclusionSymbolswithModel.size() == 2) {
+                conclusionValue = value(conclusionSymbolswithModel.get(0), conclusionSymbolswithModel.get(1));
+            }
+            if (conclusionSymbolswithModel.size() == 1) {
+                conclusionValue = value(conclusionSymbolswithModel.get(0), null);
+            }
 
-            return !(premiseValue && !conclusionValue);
+            result = !(premiseValue && !conclusionValue);
+            clause.setValue(result);
+
+            return result;
+        }
+    }
+
+    private boolean value(PropositionalSymbol lhs, PropositionalSymbol rhs) {
+        //only 2 kind of right connectives for the symbols in the premise
+        //as this program was written to define the way the premise to be like that
+        if (rhs == null) {
+            return lhs.getValue();
+        } else if (lhs.rightConnective() == Connective.Conjunction) {
+            return lhs.getValue() && rhs.getValue();
+        } else {
+            return lhs.getValue() || rhs.getValue();
         }
     }
 
     //p1 & p2 => p3
     boolean isKBTrue(List<Clause> clauses) {
 
-        List<Boolean> values = new ArrayList<>();
-
-        for (Clause clause : clauses) {
-            values.add(this.isClauseTrue(clause));
+        for (Clause c : clauses) {
+            this.isClauseTrue(c);
         }
 
-        return  values.get(0);
+        return clauses.get(0).getValue() && clauses.get(1).getValue() && clauses.get(2).getValue() && clauses.get(3).getValue() &&
+        clauses.get(4).getValue() && clauses.get(5).getValue() && clauses.get(6).getValue() && clauses.get(7).getValue() && clauses.get(8).getValue() && clauses.get(9).getValue();
     }
 }

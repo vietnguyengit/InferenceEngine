@@ -1,10 +1,10 @@
 class PropositionalSymbol {
     private String symbol;
-    private boolean isPositive;
     private boolean isFact = false;
     private boolean partofConclusion = false;
     private Connective leftConnective;
     private Connective rightConnective;
+    private boolean value;
 
     //a propositional symbol holds either true or false value
     //constructor with value
@@ -16,6 +16,14 @@ class PropositionalSymbol {
         } else {
             this.symbol = symbol.toLowerCase();
         }
+    }
+
+    boolean getValue() {
+        return value;
+    }
+
+    void setValue(boolean value) {
+        this.value = value;
     }
 
     String Description() {
