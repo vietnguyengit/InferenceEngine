@@ -1,7 +1,5 @@
-/**
 * Author: Hoang Viet Nguyen (101272826)
 * Artificial Intelligence: Assignment 02 - Propositional Logic
-**/
 
 USAGE command:
 --------------
