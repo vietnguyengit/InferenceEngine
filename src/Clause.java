@@ -16,7 +16,7 @@ class Clause {
         this.symbols.add(symbol);
     }
 
-    Connective getConnective() {
+    Connective rightConnective() {
         return this.rightConnective;
     }
     void connect() {

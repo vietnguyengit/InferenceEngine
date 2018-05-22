@@ -87,6 +87,11 @@ public class Main {
 
             KnowledgeBase kb = new KnowledgeBase(clauses);
 
+            //System.out.println(Arrays.toString(boovalues.toArray()));
+            //List<Boolean> boovalues = new ArrayList<>(Arrays.asList(true, false, false, true, true, false, false, true, true));
+            //value(boovalues);
+
+
             switch (method) {
                 case FC:
                     ForwardChaining fc = new ForwardChaining(kb, parseFile.Query());
@@ -103,4 +108,6 @@ public class Main {
             }
         }
     }
+
+
 }
