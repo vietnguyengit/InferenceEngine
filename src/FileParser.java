@@ -17,11 +17,16 @@ class FileParser {
     private List<String> rawClauses = new ArrayList<>();
     private String query;
     private File source_file;
+    private boolean error = false;
 
     //constructor
     FileParser(String file_path) {
 
-        source_file = new File(file_path);
+        if (!System.getProperty("os.name").equals("Mac OS X")) {
+            source_file = new File(file_path);
+        } else {
+            source_file = new File("../"+file_path);
+        }
 
         this.extractFile();
     }
@@ -48,6 +53,7 @@ class FileParser {
             query = file_read_lines.get(3);
         } catch (IOException e) {
             //Return error if file cannot be opened
+            error = true;
             System.out.println(source_file.toString() + " is not found!");
         }
     }
@@ -58,5 +64,10 @@ class FileParser {
 
     String Query() {
         return query;
+    }
+
+    //used by Main, to check if there is a file not found error
+    boolean error() {
+        return error;
     }
 }

@@ -55,59 +55,60 @@ public class Main {
             }
         }
 
-        //print error if available
+        //print error related to input command if available
         if (!errorMessages.isEmpty()) {
             for (String errorMessage : errorMessages) {
                 System.out.println(errorMessage);
             }
         } else {
+
             FileParser parseFile = new FileParser(args[1]);
+            //input command has no errors, but now check if any error when reading file
+            if (!parseFile.error()) {
+                //used as param for creating KB
+                List<String> preparedRawClauses = new ArrayList<>();
+                if (!parseFile.rawClauses().isEmpty()) {
+                    for (String rawClause : parseFile.rawClauses()) {
+                        //reconstruct biconditional clause into 2 implication clause
+                        if (rawClause.contains("<=>")) {
+                            String[] temp = rawClause.split("<=>");
+                            String premise = temp[0];
+                            String conclusion = temp[1];
 
-            //used as param for creating KB
-            List<String> preparedRawClauses = new ArrayList<>();
-            if (!parseFile.rawClauses().isEmpty()) {
-                for (String rawClause : parseFile.rawClauses()) {
-                    //reconstruct biconditional clause into 2 implication clause
-                    if (rawClause.contains("<=>")) {
-                        String[] temp = rawClause.split("<=>");
-                        String premise = temp[0];
-                        String conclusion = temp[1];
+                            String forwardClause = premise + "=>" + conclusion;
+                            String backwardClause = conclusion + "=>" + premise;
 
-                        String forwardClause = premise+"=>"+conclusion;
-                        String backwardClause = conclusion+"=>"+premise;
-
-                        preparedRawClauses.addAll(Arrays.asList(forwardClause, backwardClause));
-                    } else {
-                        preparedRawClauses.add(rawClause);
+                            preparedRawClauses.addAll(Arrays.asList(forwardClause, backwardClause));
+                        } else {
+                            preparedRawClauses.add(rawClause);
+                        }
                     }
                 }
-            }
 
-            List<Clause> clauses = new ArrayList<>();
-            for (String preparedRawClause : preparedRawClauses) {
-                SymbolParser symbolParser = new SymbolParser(preparedRawClause);
-                Clause newClause = new Clause(symbolParser.Symbols());
-                clauses.add(newClause);
-            }
+                List<Clause> clauses = new ArrayList<>();
+                for (String preparedRawClause : preparedRawClauses) {
+                    SymbolParser symbolParser = new SymbolParser(preparedRawClause);
+                    Clause newClause = new Clause(symbolParser.Symbols());
+                    clauses.add(newClause);
+                }
 
-            KnowledgeBase kb = new KnowledgeBase(clauses);
+                KnowledgeBase kb = new KnowledgeBase(clauses);
 
-            switch (method) {
-                case FC:
-                    ForwardChaining fc = new ForwardChaining(kb, parseFile.Query());
-                    fc.Result();
-                    break;
-                case BC:
-                    BackwardChaining bc = new BackwardChaining(kb, parseFile.Query());
-                    bc.Result();
-                    break;
-                case TT:
-                    TruthTable tt = new TruthTable(kb, parseFile.Query());
-                    tt.Result();
-                    break;
+                switch (method) {
+                    case FC:
+                        ForwardChaining fc = new ForwardChaining(kb, parseFile.Query());
+                        fc.Result();
+                        break;
+                    case BC:
+                        BackwardChaining bc = new BackwardChaining(kb, parseFile.Query());
+                        bc.Result();
+                        break;
+                    case TT:
+                        TruthTable tt = new TruthTable(kb, parseFile.Query());
+                        tt.Result();
+                        break;
+                }
             }
         }
     }
-
-
 }
