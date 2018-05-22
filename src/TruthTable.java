@@ -5,6 +5,7 @@
 
 import java.util.*;
 
+//This class was written using the pseudo code from Figure 7.10 (page 248) AI - A Modern Approach 3rd edition
 class TruthTable {
 
     private int count = 0;
