@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AI_inference-engine:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fec10699-8141-414f-8b83-20a4c4c46706" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/AI_inference_engine_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iengine.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI_inference-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AI_inference-engine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/BackwardChaining.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Clause.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Connective.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/FileParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/ForwardChaining.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/KnowledgeBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Method.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/PropositionalSymbol.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/SymbolParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/TruthTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/test2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AI_inference-engine/test3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/AI_inference-engine.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/BackwardChaining.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Clause.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Connective.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/FileParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ForwardChaining.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/KnowledgeBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Method.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PropositionalSymbol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/SymbolParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/TruthTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test3.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +56,7 @@
       <file leaf-file-name="FileParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="270">
               <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -68,14 +74,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BackwardChaining.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BackwardChaining.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BackwardChaining.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="60">
               <caret line="7" selection-start-line="7" selection-end-line="8" />
               <folding>
                 <element signature="e#0#2604#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iengine.bat" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iengine.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -119,23 +134,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SymbolParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SymbolParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#4021#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
+            <state relative-caret-position="915">
               <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -192,6 +194,7 @@
         <option value="$PROJECT_DIR$/src/TruthTable.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/FileParser.java" />
+        <option value="$PROJECT_DIR$/iengine.bat" />
       </list>
     </option>
   </component>
@@ -217,7 +220,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -229,12 +231,18 @@
             </path>
             <path>
               <item name="AI_inference-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AI_inference-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AI_inference-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,7 +251,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -362,18 +370,20 @@
       <workItem from="1526951856444" duration="5105000" />
       <workItem from="1526957956892" duration="1055000" />
       <workItem from="1526959025198" duration="1584000" />
-      <workItem from="1526960709055" duration="246000" />
+      <workItem from="1526960709055" duration="478000" />
+      <workItem from="1526961254557" duration="372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138287000" />
+    <option name="totallyTimeSpent" value="138891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="831" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32893" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -399,37 +409,36 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32893" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32893" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32893" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32893" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,15 +463,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#4334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -789,7 +789,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
+        <state relative-caret-position="915">
           <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -799,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="270">
           <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -816,11 +816,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BackwardChaining.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="60">
           <caret line="7" selection-start-line="7" selection-end-line="8" />
           <folding>
             <element signature="e#0#2604#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iengine.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -830,10 +837,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>iengine:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -841,7 +850,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
