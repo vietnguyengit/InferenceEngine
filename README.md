@@ -1,9 +1,6 @@
 /**
-*
 * Author: Hoang Viet Nguyen (101272826)
-*
 * Artificial Intelligence: Assignment 02 - Propositional Logic
-*
 **/
 
 USAGE command:
@@ -17,7 +14,7 @@ E.g.: cd ~/Dekstop/exe
 
 + Step 2: use the command format below
 
-./iengine <method> <filename>
+  ./iengine method filename
 
 Where: - method is either TT, BC or FC
 - filename is the full name of text file contains information
