@@ -1,7 +1,14 @@
+/*
+    Hoang Viet Nguyen (101272826)
+    Introduction to AI: Assignment 02
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 
 enum Connective {
+    //a biconditional sentence are automatically converted into Implication sentences
+    //e.g. p1 <=> p2: p1 => p2; p2 => p1
     Negation, Conjunction, Disjunction, Implication, Biconditional
 }
 

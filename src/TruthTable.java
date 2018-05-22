@@ -1,3 +1,8 @@
+/*
+    Hoang Viet Nguyen (101272826)
+    Introduction to AI: Assignment 02
+*/
+
 import java.util.*;
 
 class TruthTable {

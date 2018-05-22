@@ -1,3 +1,8 @@
+/*
+    Hoang Viet Nguyen (101272826)
+    Introduction to AI: Assignment 02
+*/
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,6 +21,7 @@ class Clause {
         this.symbols.add(symbol);
     }
 
+    //To be used for connecting the clauses, used by TT method
     Connective rightConnective() {
         return this.rightConnective;
     }
@@ -34,14 +40,15 @@ class Clause {
         return premise;
     }
 
+    //getter and setter to be used by TT
     boolean getValue() {
         return value;
     }
-
     void setValue(boolean value) {
         this.value = value;
     }
 
+    //List of symbols used by BC method
     List<PropositionalSymbol> PremiseForBC() {
         List<PropositionalSymbol> premise = new ArrayList<>();
         for (PropositionalSymbol symbol : symbols) {

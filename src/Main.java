@@ -1,3 +1,8 @@
+/*
+    Hoang Viet Nguyen (101272826)
+    Introduction to AI: Assignment 02
+*/
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -86,11 +91,6 @@ public class Main {
             }
 
             KnowledgeBase kb = new KnowledgeBase(clauses);
-
-            //System.out.println(Arrays.toString(boovalues.toArray()));
-            //List<Boolean> boovalues = new ArrayList<>(Arrays.asList(true, false, false, true, true, false, false, true, true));
-            //value(boovalues);
-
 
             switch (method) {
                 case FC:

@@ -1,4 +1,10 @@
+/*
+    Hoang Viet Nguyen (101272826)
+    Introduction to AI: Assignment 02
+*/
+
 class PropositionalSymbol {
+
     private String symbol;
     private boolean isFact = false;
     private boolean partofConclusion = false;
