@@ -21,13 +21,7 @@ class FileParser {
 
     //constructor
     FileParser(String file_path) {
-
-        if (!System.getProperty("os.name").equals("Mac OS X")) {
-            source_file = new File(file_path);
-        } else {
-            source_file = new File("../"+file_path);
-        }
-
+        source_file = new File(file_path);
         this.extractFile();
     }
 

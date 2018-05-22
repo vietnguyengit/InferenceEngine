@@ -92,6 +92,9 @@ public class Main {
                     clauses.add(newClause);
                 }
 
+                //System.out.println("Author: Hoang Viet Nguyen");
+                //System.out.println("-------------------------");
+
                 KnowledgeBase kb = new KnowledgeBase(clauses);
 
                 switch (method) {

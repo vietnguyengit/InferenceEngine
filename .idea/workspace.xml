@@ -2,37 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="AI_inference-engine:jar" />
+      <artifact name="iengine:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fec10699-8141-414f-8b83-20a4c4c46706" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/AI_inference_engine_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iengine.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/AI_inference-engine.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/BackwardChaining.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Clause.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Connective.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/FileParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ForwardChaining.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/KnowledgeBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Method.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PropositionalSymbol.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/SymbolParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/TruthTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artifacts/AI_inference-engine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/AI_inference-engine.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/FileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/FileParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/artifacts/AI_inference-engine.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,10 +38,16 @@
       <file leaf-file-name="FileParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+            <state relative-caret-position="229">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2042#2043#0" expanded="true" />
+                <element signature="e#2075#2076#0" expanded="true" />
+                <element signature="e#2097#2098#0" expanded="true" />
+                <element signature="e#2125#2126#0" expanded="true" />
+                <element signature="e#2212#2213#0" expanded="true" />
+                <element signature="e#2240#2241#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iengine.bat" pinned="false" current-in-tab="true">
+      <file leaf-file-name="iengine.bat" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iengine.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -122,28 +110,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#1812#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+            <state relative-caret-position="141">
+              <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iengine_jar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/.idea/artifacts/iengine_jar.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -192,9 +173,9 @@
         <option value="$PROJECT_DIR$/src/Util.java" />
         <option value="$PROJECT_DIR$/src/BackwardChaining.java" />
         <option value="$PROJECT_DIR$/src/TruthTable.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/FileParser.java" />
         <option value="$PROJECT_DIR$/iengine.bat" />
+        <option value="$PROJECT_DIR$/src/FileParser.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -228,11 +209,6 @@
             <path>
               <item name="AI_inference-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="AI_inference-engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AI_inference-engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AI_inference-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AI_inference-engine" type="b2602c69:ProjectViewProjectNode" />
@@ -371,12 +347,12 @@
       <workItem from="1526957956892" duration="1055000" />
       <workItem from="1526959025198" duration="1584000" />
       <workItem from="1526960709055" duration="478000" />
-      <workItem from="1526961254557" duration="372000" />
+      <workItem from="1526961254557" duration="4813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138891000" />
+    <option name="totallyTimeSpent" value="143332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="831" extended-state="0" />
@@ -463,13 +439,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -498,6 +467,12 @@
           <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2125#2126#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -555,6 +530,12 @@
           <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2125#2126#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -650,6 +631,12 @@
           <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2125#2126#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -787,26 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -828,6 +795,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/.idea/artifacts/iengine_jar.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2125#2126#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
