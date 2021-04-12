@@ -1,8 +1,7 @@
 
  
- * Student name: Hoang Viet Nguyen
- * Student ID: 101272826
- * Introduction to Artificial Intelligence: Assignment 02 - Propositional Logic
+ * Hoang Viet Nguyen
+ * Artificial Intelligence - Propositional Logic
  * This project was built individually.
  * ESP team ID: COS30019_A02_T012
 
