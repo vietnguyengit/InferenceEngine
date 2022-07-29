@@ -6,7 +6,6 @@
  ### Author:
 - Hoang Viet Nguyen
 - Artificial Intelligence - Propositional Logic
-- This project was built individually.
 
 
 ### I. INSTRUCTION:
